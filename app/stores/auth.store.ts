@@ -1,8 +1,17 @@
-import { defineStore } from 'pinia'
-
+import { defineStore } from "pinia";
 
 interface AuthState {
-  // user: User | null
-  token: string | null
-  loading: boolean
+  token: string | null;
+  loading: boolean;
 }
+
+export const useAuthStore = defineStore("auth", {
+  state: () => {
+    return { token: null };
+  },
+  actions: {
+    register() {},
+    login() {},
+    logout() {},
+  },
+});

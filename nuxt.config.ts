@@ -47,6 +47,11 @@ export default defineNuxtConfig({
   ui: {
     fonts: false,
     colorMode: false,
+    authForm: {
+      slots: {
+        otp: "w-full",
+      },
+    },
   },
   image: {
     presets: {
