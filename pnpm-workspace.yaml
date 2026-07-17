@@ -2,5 +2,9 @@ allowBuilds:
   '@parcel/watcher': false
   '@tailwindcss/oxide': false
   esbuild: false
+  gif: set this to true or false
+  jpeg: set this to true or false
+  png: set this to true or false
+  sharp: set this to true or false
   unrs-resolver: false
   vue-demi: false

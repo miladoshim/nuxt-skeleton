@@ -3,7 +3,8 @@ function isAuthenticated(): boolean {
 }
 
 export default defineNuxtRouteMiddleware((to, from) => {
-  if (isAuthenticated() === false) {
-    return navigateTo("/auth/login");
-  }
+  console.log("auth global middleware");
+  //   if (isAuthenticated() === false) {
+  //     return navigateTo("/auth/login");
+  //   }
 });

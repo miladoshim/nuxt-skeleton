@@ -1,6 +1,8 @@
 <template>
   <div>
     index
+    <UAlert title="Heads up!" />
+
   </div>
 </template>
 
