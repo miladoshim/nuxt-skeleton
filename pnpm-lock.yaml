@@ -107,6 +107,9 @@ importers:
       image:
         specifier: 1.0.2
         version: 1.0.2
+      motion-v:
+        specifier: ^2.3.0
+        version: 2.3.0(@vueuse/core@14.3.0(vue@3.5.39(typescript@6.0.3)))(vue@3.5.39(typescript@6.0.3))
       notivue:
         specifier: ^2.4.5
         version: 2.4.5(@nuxt/kit@4.4.8(magicast@0.5.3))(@nuxt/schema@4.4.8)(defu@6.1.7)
@@ -137,6 +140,9 @@ importers:
       typescript:
         specifier: ^6.0.3
         version: 6.0.3
+      v-motion:
+        specifier: ^1.0.2
+        version: 1.0.2
       vee-validate:
         specifier: ^4.15.1
         version: 4.15.1(vue@3.5.39(typescript@6.0.3))
@@ -6829,6 +6835,9 @@ packages:
 
   util-deprecate@1.0.2:
     resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==}
+
+  v-motion@1.0.2:
+    resolution: {integrity: sha512-GMLDDvG6jPhIfO8NlEge3dcAAPeEIKEzgQbd1DiUsRdzUksUDQUTSxq8ib0IIPYjq14RXrVLP/wdoKe7Iylkjw==}
 
   valibot@1.4.2:
     resolution: {integrity: sha512-gjdCvJ6d3RyHAneqxMYMW9QMCwYMb3jpOO0IyHZV1bnRHFBHrX3VkIILt5XYR0WhwHiH7Mty8ovuPZ/O3gamrg==}
@@ -14704,6 +14713,8 @@ snapshots:
     optional: true
 
   util-deprecate@1.0.2: {}
+
+  v-motion@1.0.2: {}
 
   valibot@1.4.2(typescript@6.0.3):
     optionalDependencies:

@@ -2,15 +2,10 @@
   <UContainer>
     <div class="flex flex-col items-center justify-center gap-4 p-4">
       <UPageCard class="w-full max-w-md">
-        <UAuthForm :schema="schema" :fields="fields" title="Welcome back!" icon="i-lucide-lock" @submit="onSubmit">
+        <UAuthForm :schema="schema" :fields="fields" title="Forgot your Password?!" icon="i-lucide-lock"
+          @submit="onSubmit">
           <template #description>
-            Don't have an account? <ULink to="/auth/register" class="text-primary font-medium">Register</ULink>.
-          </template>
-          <template #password-hint>
-            <ULink to="/auth/forgot-password" class="text-primary font-medium" tabindex="-1">Forgot password?</ULink>
-          </template>
-          <template #footer>
-            By signing in, you agree to our <ULink to="#" class="text-primary font-medium">Terms of Service</ULink>.
+            Do you have remember your password? <ULink to="/auth/login" class="text-primary font-medium">Login</ULink>.
           </template>
         </UAuthForm>
       </UPageCard>
@@ -31,23 +26,12 @@ const authStore = useAuthStore();
 const { login } = authStore;
 
 const fields: AuthFormField[] = [{
-  name: 'username',
+  name: 'email',
   type: 'text',
-  label: 'Username',
-  placeholder: 'Enter your username',
+  label: 'Email',
+  placeholder: 'Enter your email',
   required: true
-}, {
-  name: 'password',
-  label: 'Password',
-  type: 'password',
-  placeholder: 'Enter your password',
-  required: true
-},
-{
-  name: 'remember',
-  label: 'Remember me',
-  type: 'checkbox'
-},]
+}]
 
 const schema = z.object({
   username: z.string('Invalid username'),
