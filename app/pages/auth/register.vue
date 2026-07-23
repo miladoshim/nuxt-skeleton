@@ -35,8 +35,12 @@ import * as z from 'zod'
 import type { FormSubmitEvent, AuthFormField } from '@nuxt/ui'
 
 const toast = useToast()
-
 const formStep = ref(1);
+const showResendButton = ref(false);
+const isLoading = ref(false);
+const isVerifying = ref(false);
+const error = ref(null)
+
 
 const stepOneFields: AuthFormField[] = [{
   name: 'mobile',
@@ -98,6 +102,7 @@ async function onStepOneSubmit(payload: FormSubmitEvent<SchemaStepOne>) {
   console.log('Submitted Step One', payload)
 
   try {
+    isLoading.value = true;
     await $fetch("/api/auth/register_step_one", {
       method: "POST",
       body: {
@@ -110,6 +115,10 @@ async function onStepOneSubmit(payload: FormSubmitEvent<SchemaStepOne>) {
     formStep.value = 2;
   } catch (e) {
     console.error(e)
+  }
+  finally {
+    isLoading.value = false;
+
   }
 
 }

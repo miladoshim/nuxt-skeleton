@@ -16,7 +16,6 @@ export default defineNuxtConfig({
     "@nuxt/image",
     "@vueuse/nuxt",
   ],
-  css: ["~/assets/css/main.css"],
   app: {
     head: {
       charset: "utf-8",
@@ -29,6 +28,7 @@ export default defineNuxtConfig({
       link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
     },
   },
+  css: ["~/assets/css/main.css"],
   runtimeConfig: {
     public: {
       apiBaseUrl: "http://localhost:8000/api",
@@ -41,7 +41,7 @@ export default defineNuxtConfig({
   },
   vite: {
     optimizeDeps: {
-      include: ["@unhead/schema-org/vue"],
+      include: ["@unhead/schema-org/vue", "zod"],
     },
   },
   ui: {
@@ -53,6 +53,10 @@ export default defineNuxtConfig({
       },
     },
   },
+  axios: {
+    baseUrl: "https://localhost:8000/api/v1/",
+  },
+  toast: {},
   image: {
     presets: {
       avatar: {
